@@ -16,6 +16,7 @@ export class AuthService {
     }
 
     login(user: User): Observable<boolean> {
+    console.log("loginuser----->",this)
         return this.http.post(API_URL + "/login", user)
             .map(response => response.json() as User)
             .map(user => {
@@ -36,7 +37,8 @@ export class AuthService {
     }
 
     register(user: User): Observable<boolean> {
-        return this.http.post(API_URL + "/login/signup", user)
+    console.log("registeruser----->",this)
+        return this.http.post(API_URL + "/register", user)
             .map(response => response.json() as User)
             .map(user => !User.isNull(user))
             .catch(AuthService.handleError);

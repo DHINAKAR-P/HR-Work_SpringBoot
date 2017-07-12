@@ -28,6 +28,7 @@ export class LoginFormComponent implements OnInit {
         this.authService
             .login(this.model)
             .subscribe(isLoggedIn => {
+             console.log("data------------>",this.model);
                 if (isLoggedIn) this.router.navigate(['/home1']);
                 else this.messages.push({severity: 'error', summary: 'Email/password incorrect!'});
             });
