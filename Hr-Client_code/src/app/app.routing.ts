@@ -7,6 +7,7 @@ import {AuthGuard} from "./auth/services/auth-guard.service";
 import { HomePageComponent } from './home-page/home-page.component';
 import {LoginFormComponent} from "./auth/login-form/login-form.component";
 import {RegisterFormComponent} from "./auth/register-form/register-form.component";
+import {ApplyLeaveComponent} from "./leave/applyleave-form/apply-leave.component";
 
 
 const appRoutes: Routes = [
@@ -14,8 +15,9 @@ const appRoutes: Routes = [
      //{ path: 'home2', component: HomePage2Component },
      { path: '', redirectTo:'home1', pathMatch:'full'},
 
-    { path: 'login', component: LoginFormComponent  },
-    { path: 'register', component: RegisterFormComponent  },
+    { path: 'login', component: LoginFormComponent},
+    { path: 'register', component: RegisterFormComponent},
+    {path : 'applyLeave' ,component:ApplyLeaveComponent},
 
     {
         path: 'auth',

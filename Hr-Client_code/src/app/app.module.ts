@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule,Routes } from '@angular/router';
 import { Component } from '@angular/core';
+import {FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -15,11 +16,14 @@ import {CoreModule} from "./core/core.module";
 import {AuthModule} from "./auth/auth.module";
 import {AuthComponent} from "./auth/auth.component";
 import {routing} from "./app.routing";
+import {ApplyLeaveComponent}  from "./leave/applyleave-form/apply-leave.component";
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
+    ApplyLeaveComponent,
     HomePage2Component,
     UiElementsPagePanelsComponent,
     HeaderComponent,
@@ -31,7 +35,9 @@ import {routing} from "./app.routing";
         CoreModule,
         AuthModule,
         routing,
+        FormsModule,
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
