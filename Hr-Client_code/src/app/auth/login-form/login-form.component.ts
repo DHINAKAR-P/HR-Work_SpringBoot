@@ -29,8 +29,8 @@ export class LoginFormComponent implements OnInit {
             .login(this.model)
             .subscribe(isLoggedIn => {
              console.log("data------------>",this.model);
-                if (isLoggedIn) this.router.navigate(['/home1']);
-                else this.messages.push({severity: 'error', summary: 'Email/password incorrect!'});
+                if (isLoggedIn) this.router.navigate(['/LandingPage']);
+                else this.messages.push({severity: 'error', summary: 'Username/password incorrect!'});
             });
     }
 }

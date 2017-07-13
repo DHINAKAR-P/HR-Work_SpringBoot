@@ -18,6 +18,9 @@ import {AuthComponent} from "./auth/auth.component";
 import {routing} from "./app.routing";
 import {ApplyLeaveComponent}  from "./leave/applyleave-form/apply-leave.component";
 
+import { Admin_LP_Component } from './landing_page/Admin/admin_LP.component';
+import { sidebar_component } from './sidebar/sidebar.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,8 @@ import {ApplyLeaveComponent}  from "./leave/applyleave-form/apply-leave.componen
     HeaderComponent,
     FooterComponent,
     NavigationComponent,
+    Admin_LP_Component,
+    sidebar_component,
   ],
   imports: [
     BrowserModule,

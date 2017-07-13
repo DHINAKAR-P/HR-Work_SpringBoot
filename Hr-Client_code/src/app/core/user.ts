@@ -5,6 +5,7 @@ export class User {
     password: string;
     firstname: string;
     lastname: string;
+    username: string;
 
     constructor() {
     }
@@ -13,6 +14,7 @@ export class User {
         return user.email === null &&
             user.password === null &&
             user.firstname === null &&
-            user.lastname === null;
+            user.lastname === null && 
+            user.username === null;
     }
 }

@@ -9,6 +9,12 @@ import {LoginFormComponent} from "./auth/login-form/login-form.component";
 import {RegisterFormComponent} from "./auth/register-form/register-form.component";
 import {ApplyLeaveComponent} from "./leave/applyleave-form/apply-leave.component";
 
+import {Admin_LP_Component} from "./landing_page/Admin/admin_LP.component";
+
+import { sidebar_component } from "./sidebar/sidebar.component";
+
+
+
 
 const appRoutes: Routes = [
      { path: 'home1', component: HomePageComponent  },
@@ -18,6 +24,9 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginFormComponent},
     { path: 'register', component: RegisterFormComponent},
     {path : 'applyLeave' ,component:ApplyLeaveComponent},
+
+     { path:'LandingPage' ,  component: Admin_LP_Component },
+      { path: 'sidebar' , component: sidebar_component },
 
     {
         path: 'auth',
