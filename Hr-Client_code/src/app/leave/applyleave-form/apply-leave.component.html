@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+           <div class="col-md-7">
+            <div class="card card-primary animated fadeInUp animation-delay-7">
+                <div class="card-block">
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <h1 class="color-primary text-center">Apply Leave</h1>
+                            <div class="form-group">
+                                <label for="inputUser" class="col-md-2 control-label">Summary</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="inputSummary" placeholder="Summary" name ="Summary" [(ngModel)]="model.summary"  >
+                                </div>
+							               	</div> 
+                             
+                               
+                            
+							
+                          
+                            <div class="form-group">
+                                <label for="inputleaveFromDate" class="col-md-2 control-label">Leave From</label>
+                                <div class="col-md-10">
+                                    <input type="date" class="form-control" id="inputleaveFromDate" placeholder="leaveFromDate" [(ngModel)]="model.leaveFromDate"  name = "leaveFromDate">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputleaveToDate" class="col-md-2 control-label">Leave To</label>
+                                <div class="col-md-10">
+                                    <input type="date" class="form-control" id="inputleaveToDate" placeholder="leaveToDate" [(ngModel)]="model.leaveToDate" name = "leaveToDate">
+                                </div>
+                            </div>
+
+                         <!--    <md-input-container>
+  <input mdInput [mdDatepicker]="picker" placeholder="Choose a date">
+  <button mdSuffix [mdDatepickerToggle]="picker"></button>
+</md-input-container>
+<md-datepicker #picker></md-datepicker>
+                          -->
+                            <button class="btn btn-raised btn-block btn-primary">Apply Leave</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

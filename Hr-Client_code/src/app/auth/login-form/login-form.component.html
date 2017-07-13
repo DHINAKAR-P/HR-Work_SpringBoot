@@ -23,24 +23,25 @@
                     <form class="form-horizontal" (ngSubmit)="onSubmit()" #loginForm="ngForm">
                         <fieldset>
                             <div class="form-group">
-                                <label for="inputEmail" class="col-md-2 control-label">Email
+                                <label for="inputEmail" class="col-md-2 control-label">Username
                                 </label>
                                 <div class="col-md-10">
-                                    <input type="email" class="form-control" id="email" placeholder="Email"  
-                                    [(ngModel)]="model.email" #firstname="ngModel" name="email" pInputText>
+                                    <input type="text" class="form-control" id="username" placeholder="Username"  
+                                    [(ngModel)]="model.username" #firstname="ngModel" name="Username" pInputText required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword" class="col-md-2 control-label">Password</label>
                                 <div class="col-md-10">
                                     <input type="password" class="form-control" id="password" placeholder="Password"
-                                    [(ngModel)]="model.password" #password="ngModel" name="password" pInputText>
+                                    [(ngModel)]="model.password" #password="ngModel" name="password" pInputText required>
                                 </div>
                             </div>
                         </fieldset>
                         <button   type="submit" class="btn btn-raised btn-primary btn-block">Login 
                        <!--  <i class="zmdi zmdi-long-arrow-right no-mr ml-1"></i> --></button>
-                       <div class="form-group">
+                        </form>
+                       <!-- <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="text-center">
@@ -57,7 +58,7 @@
                         <a href="javascript:void(0)" class="btn-circle btn-facebook"><i class="zmdi zmdi-facebook"></i></a>
                         <a href="javascript:void(0)" class="btn-circle btn-twitter"><i class="zmdi zmdi-twitter"></i></a>
                         <a href="javascript:void(0)" class="btn-circle btn-google"><i class="zmdi zmdi-google"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
