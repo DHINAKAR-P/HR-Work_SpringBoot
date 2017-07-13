@@ -33,7 +33,6 @@ import com.hrapp.serviceimpl.hrworkObjectConverter;
 
 
 @RestController
-@RequestMapping("/login")
 public class AuthenticationController {
 
 	@Autowired
@@ -146,7 +145,7 @@ public class AuthenticationController {
 
 	}
 
-	@RequestMapping(value = "/default/", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/default/", method = RequestMethod.GET)
 	public String defaultAfterLogin(HttpServletRequest request) {
 		// HR, ADMIN, MANAGER, EMPLOYEE, CONTRACTOR
 
@@ -245,7 +244,7 @@ public class AuthenticationController {
 		Map<String, Object> response = new HashMap<String, Object>();
 		response.put("status", "sessionexpiry");
 		return response;
-	}
+	}*/
 
 	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
 	public Object welcomePage(@RequestHeader("JSESSIONID") String sessionId) {

@@ -20,6 +20,7 @@ import {ApplyLeaveComponent}  from "./leave/applyleave-form/apply-leave.componen
 
 import { Admin_LP_Component } from './landing_page/Admin/admin_LP.component';
 import { sidebar_component } from './sidebar/sidebar.component';
+import {Employee_LP_Component } from './landing_page/Employee/employee_LP.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { sidebar_component } from './sidebar/sidebar.component';
     NavigationComponent,
     Admin_LP_Component,
     sidebar_component,
+    Employee_LP_Component,
   ],
   imports: [
     BrowserModule,
