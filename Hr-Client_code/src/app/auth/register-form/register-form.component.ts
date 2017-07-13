@@ -14,9 +14,16 @@ export class RegisterFormComponent implements OnInit {
 
     model: User;
     messages: Message[] = [];
-
+ static id;
+  
+   
     constructor(private authService: AuthService) {
-    }
+      RegisterFormComponent.id = "";
+  }
+
+  get staticId() {
+    return RegisterFormComponent.id;
+  }
 
     ngOnInit(): void {
         this.model = new User();

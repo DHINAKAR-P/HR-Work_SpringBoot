@@ -17,35 +17,50 @@
                             <h1 class="color-primary text-center">Register</h1>
                             <form class="form-horizontal"  (ngSubmit)="onSubmit()" #registerForm="ngForm">
                             <fieldset>
-                            <div class="form-group">
-                                <label for="inputUser" class="col-md-2 control-label">Username</label>
+                                <div>{{staticId}}</div>
+
+                                 <div class="form-group">
+                                <label for="firstname" class="col-md-2 control-label">Firstname</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" id="inputUser" placeholder="Username">
+                                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname" [(ngModel)]="model.firstname">
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label for="lastname" class="col-md-2 control-label">Lastname</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname" [(ngModel)]="model.lastname">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail" class="col-md-2 control-label">Email</label>
+                                <label for="username" class="col-md-2 control-label">Username</label>
                                 <div class="col-md-10">
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" [(ngModel)]="model.username">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword" class="col-md-2 control-label">Password</label>
+                                <label for="primaryemail" class="col-md-2 control-label">Email</label>
                                 <div class="col-md-10">
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                    <input type="email" class="form-control"  name="primaryemail" id="primaryemail" placeholder="Email" [(ngModel)]="model.primaryemail">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-2 control-label">Password</label>
+                                <div class="col-md-10">
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password"[(ngModel)]="model.password">
                                 </div>
                             </div>
                             
-                            <div class="form-group">
-                                <label for="age" class="col-md-2 control-label">Age</label>
+                             <div class="form-group">
+                                <label for="dob" class="col-md-2 control-label">DOB</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" id="age" placeholder="Age">
+                                    <input type="date" class="form-control" [(ngModel)]="model.dob" name="dob" required/>
+                            
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="phonenumber" class="col-md-2 control-label">Phonenumber</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" id="phonenumber" placeholder=" phonenumber">
+                                    <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder=" phonenumber" [(ngModel)]="model.phonenumber">
                                 </div>
                             </div>
                             
