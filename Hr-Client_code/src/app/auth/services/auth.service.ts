@@ -16,13 +16,8 @@ export class AuthService {
     }
 
     login(user: User): Observable<boolean> {
-<<<<<<< HEAD
-    console.log("loginuser----->",this)
-        return this.http.post(API_URL + "/login/checkuserName", user)
-=======
     console.log("loginuser----->",JSON.stringify(user))
         return this.http.post(API_URL + '/j_spring_security_check?j_username='+user.username+'&j_password='+user.password, user)
->>>>>>> 96d66a91d282be17ade18d3b0efcd86269e6ec93
             .map(response => response.json() as User)
             .map(user => {
                 if (!User.isNull(user)) {

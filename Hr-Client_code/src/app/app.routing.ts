@@ -14,6 +14,7 @@ import {Admin_LP_Component} from "./landing_page/Admin/admin_LP.component";
 import { sidebar_component } from "./sidebar/sidebar.component";
 
 import {Employee_LP_Component } from './landing_page/Employee/employee_LP.component';
+import {Role_component} from './Role/role.component';
 
 
 const appRoutes: Routes = [
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
      { path: 'LandingPage' ,  component: Admin_LP_Component },
      { path: 'sidebar' , component: sidebar_component },
      { path:'Employee_LandingPage' , component: Employee_LP_Component},
+     { path: 'AddRole' , component: Role_component},
 
     {
         path: 'auth',

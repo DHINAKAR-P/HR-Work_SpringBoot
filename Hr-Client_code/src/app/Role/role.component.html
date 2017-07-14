@@ -1,0 +1,93 @@
+<!-- build:include layout/header.html -->
+<!-- /build -->
+<app-header2></app-header2>
+<nav class="navbar ms-lead-navbar navbar-mode" id="navbar-lead">
+    <div class="container container-full" id="home">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <!-- <img src="<%= assets %>/img/demo/logo-navbar.png" alt=""> -->
+                <span class="ms-logo ms-logo-white ms-logo-sm">M</span>
+                <span class="ms-title">10 <strong>Decoders</strong></span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <!-- <ul class="nav navbar-nav navbar-right">
+                <li><a data-scroll href="#home">Home</a></li>
+                <li><a data-scroll href="#services">Services</a></li>
+                <li><a data-scroll href="#portfolio">Portfolio</a></li>
+                <li><a data-scroll href="#pricing">Pricing</a></li>
+                <li><a data-scroll href="#about">About us</a></li>
+                <li><a data-scroll href="#team">Team</a></li>
+                <li><a data-scroll href="#contact">Contact</a></li>
+            </ul> -->
+        </div>
+        <!-- navbar-collapse collapse -->
+        <div id="mySidenav">
+            <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu" (click)="openmenu()"><i class="zmdi zmdi-menu"></i></a>
+        </div>
+        <!-- <a href="/sidebar" class="sb-toggle-left btn-navbar-menu"><i class="zmdi zmdi-menu"></i></a> -->
+    </div>
+    <!-- container -->
+</nav>
+<div class="material-background"></div>
+
+<div class="container container-full">
+    <div class="ms-paper">
+        <div class="row">
+            <!-- build:componentsMenu component-forms.html -->
+            <!-- /build -->
+            <div class="col-md-9 ms-paper-content-container">
+                <div class="ms-paper-content">
+                    <section class="ms-component-section">
+
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <legend>Role</legend>
+                                <!-- <div class="form-group">
+                                    <label for="inputEmail" class="col-md-2 control-label">Order</label>
+
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                    </div>
+                                </div> -->
+                                <div class="form-group">
+                                    <label for="inputPassword" class="col-md-2 control-label">Role</label>
+
+                                    <div class="col-md-10">
+                                        <input type="password" class="form-control" id="inputPassword" placeholder="Role">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="col-md-10 col-md-offset-2">
+                                <button type="submit" class="btn btn-raised btn-primary" (click)="addrole()" >Submit</button>
+                                <button type="button" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <!-- ms-paper-content -->
+            </div>
+
+            <div class="col-md-3 ms-paper-content-container">
+                <div class="ms-paper-content">
+                    <h1>Role List</h1>
+                    <section class="ms-component-section">
+                        <ul class="list-group">
+                            <li class="list-group-item">Cras justo odio</li>
+                        </ul>
+                    </section>
+                </div>
+                <!-- ms-paper-content -->
+            </div>
+            <!-- col-md-9 -->
+        </div>
+        <!-- row -->
+    </div>
+    <!-- ms-paper -->
+</div>
+<!-- container -->
+<app-footer></app-footer>
+
+<!-- build:include layout/footer.html -->
+<!-- /build -->

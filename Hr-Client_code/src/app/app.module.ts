@@ -9,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HomePage2Component } from './home-page2/home-page2.component';
 import { UiElementsPagePanelsComponent } from './ui-elements-page-panels/ui-elements-page-panels.component';
 import { HeaderComponent } from './header/header.component';
+import { Header2Component } from './header/header2.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
@@ -21,6 +22,7 @@ import {ApplyLeaveComponent}  from "./leave/applyleave-form/apply-leave.componen
 import { Admin_LP_Component } from './landing_page/Admin/admin_LP.component';
 import { sidebar_component } from './sidebar/sidebar.component';
 import {Employee_LP_Component } from './landing_page/Employee/employee_LP.component';
+import { Role_component } from './Role/role.component';
 
 
 @NgModule({
@@ -31,11 +33,13 @@ import {Employee_LP_Component } from './landing_page/Employee/employee_LP.compon
     HomePage2Component,
     UiElementsPagePanelsComponent,
     HeaderComponent,
+    Header2Component,
     FooterComponent,
     NavigationComponent,
     Admin_LP_Component,
     sidebar_component,
     Employee_LP_Component,
+    Role_component,
   ],
   imports: [
     BrowserModule,
