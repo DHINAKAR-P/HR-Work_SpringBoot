@@ -5,6 +5,8 @@ import {AuthComponent} from "./auth/auth.component";
 import {AuthGuard} from "./auth/services/auth-guard.service";
 
 import { HomePageComponent } from './home-page/home-page.component';
+import { LeavelistPageComponent } from './leavelist/leavelist-form/leavelist-form.component';
+import { ProfilePageComponent } from './profile-form/profile-form.component';
 import {LoginFormComponent} from "./auth/login-form/login-form.component";
 import {RegisterFormComponent} from "./auth/register-form/register-form.component";
 import {ApplyLeaveComponent} from "./leave/applyleave-form/apply-leave.component";
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
      { path:'Employee_LandingPage' , component: Employee_LP_Component},
      { path: 'AddRole' , component: Role_component},
 
+    {path : 'Leavelist' ,component:LeavelistPageComponent},
     {
         path: 'auth',
         component: AuthComponent

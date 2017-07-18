@@ -29,7 +29,7 @@ export class LoginFormComponent implements OnInit {
             .login(this.model)
             .subscribe(isLoggedIn => {
              console.log("data------------>",this.model);
-                if (isLoggedIn) this.router.navigate(['/LandingPage']);
+                if (isLoggedIn) this.router.navigate(['/Employee_LandingPage']);
                 else this.messages.push({severity: 'error', summary: 'Username/password incorrect!'});
             });
     }
