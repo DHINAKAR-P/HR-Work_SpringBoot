@@ -45,13 +45,7 @@ public class HrappConfig {
             {  
  
            /*  new ClassPathResource( "sql_queries/Notification_SQL.properties"),
-             new ClassPathResource( "sql_queries/Incident_user_SQL.properties"),
-             new ClassPathResource( "sql_queries/Incedent_Queue_SQL.properties"),
-             new ClassPathResource( "sql_queries/Incident_Audit_SQL.properties"),
-             new ClassPathResource( "sql_queries/Incident_Attachment_SQL.properties"),
-             new ClassPathResource( "sql_queries/Incident_Notes_SQL.properties"),
-             new ClassPathResource( "sql_queries/Incident_SQL.properties"),
-             new ClassPathResource( "sql_queries/Incident_status_SQL.properties"),
+           
              new ClassPathResource( "sql_queries/Incident_UserRole_SQL.properties"), */
    
  

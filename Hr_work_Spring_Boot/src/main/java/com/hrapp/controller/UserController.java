@@ -17,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hrapp.domain.core.InUser;
 import com.hrapp.domain.core.UserStatus;
 import com.hrapp.response.ResponseWrapper;
+import com.hrapp.serviceimpl.AuthImpl;
 import com.hrapp.serviceimpl.LoginService;
 import com.hrapp.serviceimpl.UserService;
 import com.hrapp.serviceimpl.hrworkObjectConverter;
@@ -31,6 +32,9 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
+	
+	@Autowired
+	AuthImpl authimpl; 
 
 	List<InUser> listArray;
 	@Autowired
@@ -68,6 +72,38 @@ public class UserController {
 
 	 
 
+
+	@RequestMapping(value = "/login", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
+	public ResponseWrapper loginUser(@RequestBody InUser user) {
+		ResponseWrapper response = new ResponseWrapper();
+		LOG.debug("To create user");
+
+		try {
+			InUser tempuser = authimpl.loadUserByUsername(user.getUsername());
+			if(tempuser == null) {
+				throw new Exception("User not found");
+			}
+			if(tempuser.getPassword().equals(user.getPassword())) {
+				response.setResponseCode(HttpStatus.SC_OK);
+				response.setResult(user);
+				response.setResponseSuccess("You have Logged in successfully!");
+				return response;
+			}else {
+				response.setResponseCode(org.apache.commons.httpclient.HttpStatus.SC_FORBIDDEN);
+				response.setResponseError("Login details mismatch,plz try once again!");
+				return response;
+			}
+
+		} catch (Exception e) {
+			LOG.error("Error while creating user:", e);
+			response.setResponseCode(org.apache.commons.httpclient.HttpStatus.SC_INTERNAL_SERVER_ERROR);
+			response.setResponseError("User Not found, please try again!");
+			return response;
+		}
+
+	}
+
+	
 	@RequestMapping(value = "/deleteuser", method = RequestMethod.GET)
 	public ResponseWrapper deleteuser(@RequestParam("id") Long id) {
 		ResponseWrapper response = new ResponseWrapper();

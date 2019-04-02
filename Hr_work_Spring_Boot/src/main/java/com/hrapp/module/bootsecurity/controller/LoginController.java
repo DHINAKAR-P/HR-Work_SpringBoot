@@ -1,4 +1,4 @@
-package com.hrapp.module.bootsecurity.controller;
+/*package com.hrapp.module.bootsecurity.controller;
 
 import java.security.Principal;
 
@@ -44,3 +44,4 @@ public class LoginController {
 	
 	
 }
+*/

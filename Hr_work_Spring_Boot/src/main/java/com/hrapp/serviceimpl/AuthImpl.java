@@ -1,26 +1,23 @@
-/*package com.hrapp.serviceimpl;
+package com.hrapp.serviceimpl;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hrapp.domain.core.InUser;
 import com.hrapp.repository.UserRepository;
 
-public class AuthImpl implements UserDetailsService {
+@Component
+public class AuthImpl {
 	@Autowired
 	private UserRepository userRepository;
 
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+	public InUser loadUserByUsername(String username) throws Exception {
 		System.out.println("we are in spring security");
 		System.out.println("role user" + username);
 		int role_value = 0;
@@ -32,7 +29,7 @@ public class AuthImpl implements UserDetailsService {
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (IOException e) {
+		} catch (@SuppressWarnings("hiding") IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -59,15 +56,15 @@ public class AuthImpl implements UserDetailsService {
 			role_value = 4;
 		}
 
-		org.springframework.security.core.userdetails.User userNew = new org.springframework.security.core.userdetails.User(domainUser.getUsername(), domainUser.getPassword(),
-				getAuthorities(role_value));
-		return userNew;
+		//InUser userNew = new InUserUser(domainUser.getUsername(), domainUser.getPassword(),
+		//		getAuthorities(role_value));
+		return domainUser;
 	}
 
-	public Collection<? extends GrantedAuthority> getAuthorities(Integer role) {
+/*	public Collection<? extends GrantedAuthority> getAuthorities(Integer role) {
 		List<GrantedAuthority> authList = getGrantedAuthorities(getRoles(role));
 		return authList;
-	}
+	}*/
 
 	// HR, ADMIN, MANAGER, EMPLOYEE, CONTRACTOR
 	public List<String> getRoles(Integer role) {
@@ -88,13 +85,12 @@ public class AuthImpl implements UserDetailsService {
 		return roles;
 	}
 
-	public static List<GrantedAuthority> getGrantedAuthorities(List<String> roles) {
+	/*public static List<GrantedAuthority> getGrantedAuthorities(List<String> roles) {
 		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 		for (String role : roles) {
 			authorities.add(new SimpleGrantedAuthority(role));
 		}
 		return authorities;
-	}
+	}*/
 
 }
-*/
