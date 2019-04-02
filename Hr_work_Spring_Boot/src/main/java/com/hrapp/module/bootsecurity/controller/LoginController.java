@@ -2,8 +2,7 @@ package com.hrapp.module.bootsecurity.controller;
 
 import java.security.Principal;
 
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.CrossOrigin;
+//import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,8 +16,8 @@ public class LoginController {
 		try {
 			//System.out.println("-------*********in try******----------------"+principle.toString());
 			ResponseWrapper wrap = new ResponseWrapper();
-			Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-			wrap.setResult(principal);
+			//Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+			//wrap.setResult(principal);
 			wrap.setResponseSuccess("success");
 			System.out.println("-------sucess********----------------");
 			return wrap;

@@ -1,27 +1,15 @@
 package com.hrapp.module.bootsecurity.service;
 
 import java.util.Date;
-import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.hrapp.domain.core.InUser;
 import com.hrapp.module.bootsecurity.dao.GpBootSecurityUserDao;
 
 
-/**
- * Date Created: September 22 2012
- *
- * @author Dan Castillo
- *
- *         The purpose of this class is to provide the business logic needed to
- *         register a new user to the system
- *
- *
- *
- */
+ 
 @Service("GpUserRegistrationService")
 public class GpUserRegistrationService extends InBaseService{
 
@@ -88,7 +76,7 @@ public class GpUserRegistrationService extends InBaseService{
 					.println("In  GpUserRegistrationService - lightRegisterUser()"
 							+ " thesalt is: " + thesalt);
 
-			ShaPasswordEncoder enc = new ShaPasswordEncoder(256); // 256 s/b
+			//ShaPasswordEncoder enc = new ShaPasswordEncoder(256); // 256 s/b
 																	// configurable
 			/*String encrypted = enc.encodePassword(newuser.getPassword(),
 					thesalt); // save this to DB

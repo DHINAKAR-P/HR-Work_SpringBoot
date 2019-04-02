@@ -40,19 +40,21 @@ compile group: 'log4j', name: 'log4j', version: '1.2.16'
 compile group: 'commons-httpclient', name: 'commons-httpclient', version: '3.1'
 compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
 compile group: 'net.sf.flexjson', name: 'flexjson', version: '2.1'
+// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile ('com.mangofactory:swagger-springmvc:1.0.2')
  	compile ('com.wordnik:swagger-core:1.5.3-M1')
  	compile ('com.mangofactory:swagger-models:1.0.2')
- 	runtime('mysql:mysql-connector-java')
+ 	//runtime('mysql:mysql-connector-java')
  	compile group: 'org.apache.logging.log4j', name: 'log4j-1.2-api', version: '2.1'
  	compile("org.springframework.boot:spring-boot-devtools")
  	compile('org.springframework.boot:spring-boot-starter-data-jpa')
- 	compile('org.springframework.boot:spring-boot-starter-security')
+ 	//compile('org.springframework.boot:spring-boot-starter-security')
  	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	compile "com.twilio.sdk:twilio-java-sdk:6.3.0"
 	compile "com.twilio.sdk:twilio:7.5.0"
-	runtime('mysql:mysql-connector-java')
 }
 
 task wrapper(type: Wrapper) {

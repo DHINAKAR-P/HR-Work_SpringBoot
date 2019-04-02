@@ -1,10 +1,6 @@
 package com.hrapp.domain.core;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -16,16 +12,12 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "InUser")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class InUser implements UserDetails {
+public class InUser  {
 
 	public InUser() {
 		// TODO Auto-generated constructor stub
@@ -137,42 +129,7 @@ public class InUser implements UserDetails {
 	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
 	}
-
-	@Override
-	public Collection<GrantedAuthority> getAuthorities() {
-		List<GrantedAuthority> list = new ArrayList<GrantedAuthority>();
-		for (InAuthority role : roles) {
-			System.out.println("The roles is: " + role.getAuthority());
-			list.add(new SimpleGrantedAuthority(role.getAuthority()));
-		}
-
-		return list;
-	}
-
-	@Override
-	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
+ 
 	public int getNewuser() {
 		return newuser;
 	}

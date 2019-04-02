@@ -1,48 +1,32 @@
 package com.hrapp.module.bootsecurity.service;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.hrapp.domain.core.InAuthority;
 import com.hrapp.domain.core.InUser;
-import com.hrapp.module.bootsecurity.iservices.IGpUserService;
 
 
 @Service
 @Transactional
-public class GpBootSecurityUserService implements  IGpUserService {
+public class GpBootSecurityUserService  {
 
 	@Autowired
 	private com.hrapp.module.bootsecurity.dao.GpBootSecurityUserDao gpuser_Dao;
 
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+	public InUser loadUserByUsername(String username) throws Exception {
 		System.out.println("loadUserByUsername............> "+username);
 
 		InUser user = gpuser_Dao.findUser(username);
 		if (user == null) {
-			throw new UsernameNotFoundException("No User found");
+			throw new Exception("No User found");
 		}
 		System.out.println("CHECKED USER NAME............> "+user.getUsername());
-		return (UserDetails) user;
+		return (InUser) user;
 
 	}
 
-	public InUser authenticateSocialUser(InUser gpuser, HttpServletRequest request) throws Exception{
+	/*public InUser authenticateSocialUser(InUser gpuser, HttpServletRequest request) throws Exception{
 
 		Set<InAuthority> authorities = new HashSet<InAuthority>();
 		InAuthority authority = new InAuthority();
@@ -77,5 +61,5 @@ public class GpBootSecurityUserService implements  IGpUserService {
 
 		return user;
 
-	}
+	}*/
 }

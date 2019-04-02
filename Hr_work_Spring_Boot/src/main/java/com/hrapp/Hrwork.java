@@ -17,42 +17,44 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import com.hrapp.module.bootsecurity.controller.SimpleCORSFilter;
 
-@EnableJpaRepositories({"com.hrapp.*"})
+@EnableJpaRepositories({ "com.hrapp.*" })
 @EnableAutoConfiguration
-@ComponentScan({"com.hrapp.*"})
+@ComponentScan({ "com.hrapp.*" })
 @SpringBootApplication
 public class Hrwork extends SpringBootServletInitializer {
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Hrwork.class);
-    }
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(Hrwork.class);
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(Hrwork.class, args);
 	}
-	@Bean
-	public FilterRegistrationBean someFilterRegistration() {
-	FilterRegistrationBean registration = new FilterRegistrationBean();
-	registration.setFilter(simpleCORSFilter());
-	registration.addUrlPatterns("/*");
-	registration.setName("simpleCORSFilter");
-	registration.setOrder(1);
-	return registration;
-}
- @Bean(name = "simpleCORSFilter") 
-	public Filter simpleCORSFilter() {
-	return new SimpleCORSFilter();
-}
- 
- @Bean
- public WebMvcConfigurer corsConfigurer() {
-     return new WebMvcConfigurerAdapter() {
-         @Override
-         public void addCorsMappings(CorsRegistry registry) {
-             registry.addMapping("/**").allowedOrigins("http://localhost:4200/");
-         }
-     };
- }
 
- }
+	/*@Bean
+	public FilterRegistrationBean someFilterRegistration() {
+		FilterRegistrationBean registration = new FilterRegistrationBean();
+		registration.setFilter(simpleCORSFilter());
+		registration.addUrlPatterns("/*");
+		registration.setName("simpleCORSFilter");
+		registration.setOrder(1);
+		return registration;
+	}
+
+	@Bean(name = "simpleCORSFilter")
+	public Filter simpleCORSFilter() {
+		return new SimpleCORSFilter();
+	}
+
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurerAdapter() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("http://localhost:4200/");
+			}
+		};
+	}*/
+
+}

@@ -14,10 +14,11 @@ db:
   driver: com.mysql.jdbc.Driver
   url: jdbc:mysql://localhost:3306/hrworkapp?useUnicode=true&characterEncoding=UTF-8&&useSSL=false
   username: root
-  password: 6577
+  password: root
   
 
 #Hibernate
+# ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 hibernate:
   dialect: org.hibernate.dialect.MySQL5Dialect
   show_sql: true

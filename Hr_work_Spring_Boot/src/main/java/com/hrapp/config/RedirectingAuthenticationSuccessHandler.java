@@ -1,5 +1,4 @@
-//package geppetto.module.bootsecurity.config;
-package com.hrapp.config;
+/*package com.hrapp.config;
 
 import java.io.IOException;
 import java.util.List;
@@ -38,7 +37,8 @@ public class RedirectingAuthenticationSuccessHandler extends SavedRequestAwareAu
 			Authentication authentication) throws IOException, ServletException {
 		System.err.println("\nonAuthenticationSuccess =>"+authentication.toString());
 		System.err.println("\nresponse JSESSIONID =>"+response.getHeader("Set-Cookie"));
-		String cookies = response.getHeader("Set-Cookie");
+		//String cookies = response.getHeader("Set-Cookie");
+		String cookies = "JSESSIONID=dhinakardummyjsonid;dummycookiesetted";
 		if(cookies!=null){
 		String [] v=cookies.split(";");
 		System.out.println("v-->"+v[0]);
@@ -53,4 +53,4 @@ public class RedirectingAuthenticationSuccessHandler extends SavedRequestAwareAu
 		super.onAuthenticationSuccess(request, response, authentication);
 		}
 	}
-	
+	*/

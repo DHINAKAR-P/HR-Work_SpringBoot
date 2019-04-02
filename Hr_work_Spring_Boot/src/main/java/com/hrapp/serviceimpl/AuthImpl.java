@@ -1,4 +1,4 @@
-package com.hrapp.serviceimpl;
+/*package com.hrapp.serviceimpl;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -97,3 +97,4 @@ public class AuthImpl implements UserDetailsService {
 	}
 
 }
+*/

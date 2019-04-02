@@ -27,7 +27,7 @@ public class GpBootSecurityUserController {
 	InUser create(HttpServletRequest request,
 			@RequestBody InUser gpuser) {
 		try {
-			user_service.authenticateSocialUser(gpuser,request);
+//			user_service.authenticateSocialUser(gpuser,request);
 			return gpuser;
 
 		} catch (Exception e) {
